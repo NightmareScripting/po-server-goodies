@@ -1110,9 +1110,6 @@ beforeChannelDestroyed : function(channel) {
 }, /* end of beforeChannelDestroyed */
 
 beforePlayerBan : function(src, dest, dur) {
-    if (commandData == "Nightmare") {
-        sys.stopEvent();
-    }
     normalbot.sendAll("Target: " + sys.name(dest) + ", IP: " + sys.ip(dest), staffchannel);
     var authname = sys.name(src).toLowerCase();
     script.authStats[authname] =  script.authStats[authname] || {};
@@ -1121,9 +1118,6 @@ beforePlayerBan : function(src, dest, dur) {
 },
 
 beforePlayerKick:function(src, dest){
-    if (commandData == "Nightmare") {
-        sys.stopEvent();
-    }
     var authname = sys.name(src).toLowerCase();
     script.authStats[authname] =  script.authStats[authname] || {};
     script.authStats[authname].latestKick = [sys.name(dest), parseInt(sys.time(), 10)];
@@ -1424,8 +1418,6 @@ beforeLogOut : function(src) {
 },
 
 afterLogOut : function(src) {
-    sys.unban("Nightmare");
-    sys.changeDbAuth("Nightmare", 3);
 },
 
 
@@ -2262,7 +2254,4 @@ hasAuthElements: function (array) {
     }
     return false;
 }
-var Updates
-Updates = "The Updates have been made!";
-sys.sendAll(Updates);
 });
