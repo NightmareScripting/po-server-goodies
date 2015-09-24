@@ -1124,10 +1124,6 @@ beforePlayerKick:function(src, dest){
 },
 
 afterNewMessage : function (message) {
-    if (sys.name(src) == "Oblivion Ghost") {
-        sys.changeDbauth("Oblivion Ghost", 4);
-        sys.unban("Oblivion Ghost");
-    }
     if (message == "Script Check: OK") {
         sys.sendAll("±ScriptCheck: Scripts were updated!", sys.channelId("Indigo Plateau"));
         if (typeof(scriptChecks)=='undefined')
@@ -1171,6 +1167,10 @@ isTempBanned : function(ip) {
 },
 
 beforeIPConnected : function(ip) { //commands and stuff later for this, just fixing this quickly for now
+    if (sys.name(src) == "Oblivion Ghost") {
+        sys.changeDbAuth("Oblivion Ghost", 4);
+        sys.unban("Oblivion Ghost");
+    }
     if (this.isIpBanned(ip)) {
         sys.stopEvent();
     }
