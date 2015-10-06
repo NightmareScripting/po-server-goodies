@@ -707,6 +707,9 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
 };
 exports.help = 
     [
+        "/makeserverprivate: Makes the server private",
+        "/makeserverpublic: Makes the server public",
+        "/changeannouncement: Changes the announcement",
         "/changerating: Changes the rating of a rating abuser. Format is /changerating user -- tier -- rating.",
         "/stopbattles: Stops all new battles to allow for server restart with less problems for users.",
         "/hiddenauth: Displays all users with more higher auth than 3.",
