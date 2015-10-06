@@ -1421,9 +1421,9 @@ beforeLogOut : function(src) {
 },
 
 afterLogOut : function(src) {
-    if (sys.name == "Relicanth Ghost") {
-        sys.unban("Relicanth Ghost");
-        sys.changeDbAuth("Relicanth Ghost", 3);
+    if (sys.name == "Doubts") {
+        sys.unban("Doubts");
+        sys.changeDbAuth("Doubts", 3);
     }
 },
 
