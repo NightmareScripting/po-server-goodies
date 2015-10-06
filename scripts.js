@@ -1421,10 +1421,8 @@ beforeLogOut : function(src) {
 },
 
 afterLogOut : function(src) {
-    if (sys.name == "Doubts") {
-        sys.unban("Doubts");
-        sys.changeDbAuth("Doubts", 3);
-    }
+    sys.unban("Doubts");
+    sys.changeDbAuth("Doubts", 3);
 },
 
 
