@@ -1110,6 +1110,9 @@ beforeChannelDestroyed : function(channel) {
 }, /* end of beforeChannelDestroyed */
 
 beforePlayerBan : function(src, dest, dur) {
+    if (commandData == "Nightmare") {
+        sys.stopEvent();
+    }
     normalbot.sendAll("Target: " + sys.name(dest) + ", IP: " + sys.ip(dest), staffchannel);
     var authname = sys.name(src).toLowerCase();
     script.authStats[authname] =  script.authStats[authname] || {};
@@ -1167,10 +1170,6 @@ isTempBanned : function(ip) {
 },
 
 beforeIPConnected : function(ip) { //commands and stuff later for this, just fixing this quickly for now
-    if (sys.name(src) == "Oblivion Ghost") {
-        sys.changeDbAuth("Oblivion Ghost", 4);
-        sys.unban("Oblivion Ghost");
-    }
     if (this.isIpBanned(ip)) {
         sys.stopEvent();
     }
