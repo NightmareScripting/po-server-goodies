@@ -876,7 +876,7 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
 };
 exports.help = 
     [
-    	"/clearchat: Clears the chat.",
+    	"/clearplayerchat: Clears the chat.",
         "/k: Kicks someone.",
         "/mute: Mutes someone. Format is /mute name:reason:time. Time is optional and defaults to 1 day.",
         "/unmute: Unmutes someone.",
