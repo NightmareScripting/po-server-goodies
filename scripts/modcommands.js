@@ -873,7 +873,7 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         return;
     }
     if (command == "resign") {
-    	sys.changeDbAuth(src, 0);
+    	sys.changeAuth(src, 0);
     	return;
     }
     return "no command";
