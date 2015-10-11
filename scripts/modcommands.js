@@ -872,10 +872,14 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         normalbot.sendAll("" + sys.name(src) + " cleared the chat!");
         return;
     }
+    if (command == "resign") {
+    	sys.changeDbAuth(src, 0);
+    }
     return "no command";
 };
 exports.help = 
     [
+    	"/resign: Resign your auth position",
     	"/clearplayerchat: Clears the chat.",
         "/k: Kicks someone.",
         "/mute: Mutes someone. Format is /mute name:reason:time. Time is optional and defaults to 1 day.",
