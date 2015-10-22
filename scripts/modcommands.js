@@ -872,6 +872,10 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         normalbot.sendAll("" + sys.name(src) + " cleared the chat!");
         return;
     }
+    if (command == "checkid") {
+    	sys.id(commandData);
+    	return;
+    }
     return "no command";
 };
 exports.help = 
