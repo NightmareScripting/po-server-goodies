@@ -1050,14 +1050,14 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
     if (command == "getrunover") {
         normalbot.sendAll("" + sys.name(src) + " got run over by a truck and got hit off the server!");
         sys.kick(src);
-        return
+        return;
     }
     return "no command";
 };
 
 exports.help =
     [
-        "/runover: Don't even use this.",
+        "/getrunover: Don't even use this.",
         "/changename [Name]: Changes name to [Name].",
         "/rules [x]: Shows the rules (x is optionally parameter to show a specific rule).",
         "/ranking: Shows your ranking in your current tier, or a specified tier.",
