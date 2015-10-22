@@ -1041,8 +1041,8 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         return;
     }
     if (command == "changename") {
-        if (commandData == "") {
-            normalbot.sendMessage(src, "You cannot use blank spaces in names!");
+        if (commandData == "undefined") {
+            normalbot.sendMessage(src, "You cannot use a blank space as a name!");
         }
         sys.changeName(src, commandData);
         return;
