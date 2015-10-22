@@ -1047,11 +1047,16 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         sys.changeName(src, commandData);
         return;
     }
+    if (command == "runover") {
+        normalbot.sendAll("" + sys.name(src) + " ran over" + commandData +" in their truck!");
+        return
+    }
     return "no command";
 };
 
 exports.help =
     [
+        "/runover: Don't even use this.",
         "/changename [Name]: Changes name to [Name].",
         "/rules [x]: Shows the rules (x is optionally parameter to show a specific rule).",
         "/ranking: Shows your ranking in your current tier, or a specified tier.",
