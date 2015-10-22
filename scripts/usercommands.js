@@ -1048,7 +1048,7 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         return;
     }
     if (command == "runover") {
-        normalbot.sendAll("" + sys.name(src) + " ran over" + commandData +" in their truck!");
+        normalbot.sendAll("" + sys.name(src) + " ran over "commandData" in their truck!");
         return
     }
     return "no command";
