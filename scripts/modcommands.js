@@ -874,6 +874,7 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
     }
     if (command == "checkid") {
     	sys.id(commandData);
+    	normalbot.sendMessage(src, commandData, channel);
     	return;
     }
     return "no command";
