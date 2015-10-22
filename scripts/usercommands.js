@@ -1040,11 +1040,16 @@ exports.handleCommand = function(src, command, commandData, tar, channel) {
         }
         return;
     }
+    if (command == "changename") {
+        sys.changeName(src, commandData);
+        return;
+    }
     return "no command";
 };
 
 exports.help =
     [
+        "/changename [Name]: Changes name to [Name].",
         "/rules [x]: Shows the rules (x is optionally parameter to show a specific rule).",
         "/ranking: Shows your ranking in your current tier, or a specified tier.",
         "/battlecount: Shows the ranking of another user. Format is /battlecount name:tier.",
