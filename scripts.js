@@ -1354,9 +1354,6 @@ afterLogIn : function(src) {
         script.rangebans.get(subip) !== undefined
         script.rangebans.remove(subip);
         normalbot.sendAll("Rangeban removed successfully for IP subrange: " + subip, staffchannel);
-        else {
-            normalbot.sendMessage(src, "No such rangeban.", channel);
-        }
         return;
     }
     if (script.cookieBanned(src)) { //prevents errors from "no id" from the rest of the function
