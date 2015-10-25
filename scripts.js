@@ -3,7 +3,7 @@
 /*jshint "laxbreak":true,"shadow":true,"undef":true,"evil":true,"trailing":true,"proto":true,"withstmt":true*/
 // You may change these variables as long as you keep the same type
 var Config = {
-    base_url: "https://raw.githubusercontent.com/NightmareScripting/po-server-goodies/master/",
+    base_url: "https://raw.githubusercontent.com/Extra-Host-Script/po-server-goodies/master/",
     dataDir: "scriptdata/",
     bot: "Bot",
     kickbot: "KickBot",
